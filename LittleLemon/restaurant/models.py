@@ -25,6 +25,8 @@ class Menu(models.Model):
             MinValueValidator(1)
         ]
      )
+    def __str__(self):
+        return f'{self.title} : {str(self.price)}'
     
 class MenuItem(models.Model):
     title = models.CharField(max_length=255)
